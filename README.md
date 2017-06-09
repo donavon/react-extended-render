@@ -14,7 +14,7 @@ For example, if your code looks like this:
 ```js
 import React, { Component } from 'react';
 ```
-The all you have to do is change it to this:
+Then all you have to do is change it to this:
 ```js
 import React from 'react';
 import Component from 'react-extended-render';
@@ -35,9 +35,15 @@ This allows your code to eloquently destructure `props` inline within the passed
 
 This is all find and good, but what if some day Facebook, in all of their infinite wisdom decides to pass parameters to `render`?
 Will your code break? Nope! We've future-proofed the whole thing by appending any parameters that might be passed in the future at the end.
-So if some day Facebook passes `foo` to `render`, you cn get to it like this:
+So if some day Facebook passes `foo` to `render`, you can get to it like this:
 ```js
 render(props, state, context, foo) {
   ...
 }
 ```
+
+## Do it live!
+
+You can see it live and in action on [CodeSandbox](https://codesandbox.io/s/z2JZZlWm).
+
+![Do It Live!](https://media.giphy.com/media/q7UpJegIZjsk0/giphy.gif)
