@@ -29,13 +29,29 @@ export default class Hello extends Component {
 }
 ```
 
-This allows your code to eloquently destructure `props` inline within the passed parameters.
+And here's an example that uses `state` as passed to `render`.
+```js
+export default class FlipFlop extends Component {
+  constructor() {
+    super();
+    this.state = { flip: false };
+    setInterval(() => {
+      this.setState({ flip: !this.state.flip });
+    }, 1000)
+  }
+  render(_, { flip }) {
+    return <div>{flip ? 'Flip' : 'Flop'}</div>;
+  }
+}
+```
+
+This allows your code to eloquently destructure `props` (or `state` or `context`) inline within the passed parameters.
 
 ## Future Proof?
 
-This is all find and good, but what if some day Facebook, in all of their infinite wisdom decides to pass parameters to `render`?
+This is all fine and good, but what if some day Facebook, in all of their infinite wisdom, decides to pass parameters to `render`?
 Will your code break? Nope! We've future-proofed the whole thing by appending any parameters that might be passed in the future at the end.
-So if some day Facebook passes `foo` to `render`, you can get to it like this:
+So, if some day Facebook passes `foo` to `render`, you can get to it like this:
 ```js
 render(props, state, context, foo) {
   ...
@@ -44,6 +60,9 @@ render(props, state, context, foo) {
 
 ## Do it live!
 
-You can see it live and in action on [CodeSandbox](https://codesandbox.io/s/z2JZZlWm).
+You can see examples above running live and in action on CodeSandbox:
+
+- [HelloWorld](https://codesandbox.io/s/z2JZZlWm)
+- [FlipFlop](https://codesandbox.io/s/R63ROYjgw)
 
 ![Do It Live!](https://media.giphy.com/media/q7UpJegIZjsk0/giphy.gif)

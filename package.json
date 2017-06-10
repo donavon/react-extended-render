@@ -1,6 +1,6 @@
 {
   "name": "react-extended-render",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extends React's `Component` by passing `props`, `state`, and `context` to the `render` method of a class.",
   "main": "./lib/ExtendedRender.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "render",
     "component"
   ],
-  "author": "Donavon West",
+  "author": "Donavon West <donavon@github.com> (http://donavon.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/donavon/react-extended-render/issues"
