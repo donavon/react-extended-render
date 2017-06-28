@@ -1,6 +1,6 @@
 {
   "name": "react-extended-render",
-  "version": "1.0.2",
+  "version": "2.0.0-beta.2",
   "description": "Extends React's `Component` by passing `props`, `state`, and `context` to the `render` method of a class.",
   "main": "./lib/ExtendedRender.js",
   "scripts": {
