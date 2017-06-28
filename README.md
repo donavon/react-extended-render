@@ -95,12 +95,12 @@ render() {
 
   return (
     if (loading) {
-      return <div className={className}>Loading...</div>;
+      return <div>Loading...</div>;
     } else if (error) {
-      return <div className={className}>Error</div>;
+      return <div>Error</div>;
     }
     return (
-      <div className={className}>
+      <div>
         Yay! My component successfully loaded!
       </div>
     );
@@ -114,17 +114,17 @@ Let's say you could separate your concerns and render only what you needed.
 Your code would look something like this:
 
 ```js
-renderLoading({ className }) {
-  return <div className={className}>Loading...</div>;
+renderLoading() {
+  return <div >Loading...</div>;
 }
 
-renderError({ className }) {
-  return <div className={className}>Error</div>;
+renderError() {
+  return <div>Error</div>;
 }
 
-render({ className }) {
+render() {
   return (
-    <div className={className}>
+    <div>
       Yay! My component successfully loaded!
     </div>
   );
